@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
     cout << it->key().ToString() << " : " << it->value().ToString() << endl;
   }
 
-  if (false == it->status().ok()) {
+  if (!it->status().ok()) {
     cerr << "An error was found during the scan" << endl;
     cerr << it->status().ToString() << endl;
   }
