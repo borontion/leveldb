@@ -1,8 +1,8 @@
 all: sample
 
 sample: sample.cc
-	mkdir bin
+	mkdir -p bin
 	g++ -o bin/$@ $<  -lleveldb -lpthread -lsnappy
 
 clean:
-	rm -f sample
+	rm -rf bin/

@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
 
   leveldb::Status status = leveldb::DB::Open(options, "./testdb", &db);
 
-  if (false == status.ok()) {
+  if (!status.ok()) {
     cerr << "Unable to open/create test database './testdb'" << endl;
     cerr << status.ToString() << endl;
     return -1;
